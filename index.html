@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food Panda Clone | Food & Grocery</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+        .dropdown{
+            background: none !important;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        .dropdown-item{
+            height: 6vh !important;
+        }
+        .nav-item{
+            margin: 15px;
+            padding: 5px;
+            border-radius: 10px;
+            transition: background 1s;
+        }
+        .fs-4{
+            color: #C21760;
+        }
+        .nav-item:hover{
+            background-color: rgb(219, 219, 219);
+        }
+        li{
+            list-style: none;
+        }
+        nav{
+            box-shadow: 2px 2px 10px 10px rgba(218, 218, 218, 0.575) ;
+        }
+        .city{
+          transition: box-shadow 1s, transform 1s;
+        }
+        .city:hover{
+          box-shadow: 2px 2px 10px 10px rgb(231, 231, 231);
+          transform:scale(1.06);
+        }
+        .icon i:hover{
+          background-color: rgb(243, 243, 243);
+          font-size: 1.7rem !important;
+          cursor: pointer;
+        }
+        .abc {
+            margin-top: 250px;
+        }
+        .b1 {
+          color: #ffffff;
+          background-color: #C21760;
+        }
+        
+        
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary d-none d-lg-flex d-xl-flex d-xxl-flex position-fixed top-0 w-100 z-3">
+        <div class="container-fluid">
+          <a class="navbar-brand  w-50" href="http://127.0.0.1:5500/index.html"><img class=" w-25 m-2 ms-5" src="img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse position-absolute end-0 me-5" id="navbarNav">
+            <ul class="navbar-nav">
+
+                <div class="mt-4">
+                  <button class="b2 p-2 rounded ms-2" type="button"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; border: none !important;">
+            Log in
+          </button>
+          <button class="b1 p-2 rounded ms-2" type="button"
+          style=" --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; border: none !important;">
+    Sign up
+  </button>
+                </div>
+
+              <li class="nav-item">
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-global-line fs-4"></i>&nbsp;<span class="fw-bold ms-1">EN</span>
+                    </a>
+                  
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item " href="#"><span class="fw-bold fs-6">ENGLISH</span></a></li>
+                    </ul>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <nav class="navbar-expand-lg bg-body-tertiary d-lg-none d-xl-none d-xxl-none">
+        <ul class="d-flex justify-content-between w-100 align-items-center p-2">
+            <li class="w-25 text-center"><i class="ri-contacts-line w-100 fs-2"></i></li>
+            <li class="w-25 text-center"><img class="" src="img/logo.png" alt="" style="width: 180px;margin-left: -50px;"></li>
+            <li class="w-25 text-center"><i class="ri-delete-bin-line w-100 fs-2"></i></li>
+        </ul>
+    </nav>
+    <div class="container-fluid mb-lg-5 mb-xl-5 mb-xxl-5 mb-0 mt-lg-5">
+        <div class="row h-100" style="background: linear-gradient(rgb(240, 240, 240) , rgb(244, 244, 244) ,rgb(255, 255, 255));">
+        <div class="col-6 h-100"><h1 class="fw-medium ms-2 mb-5" style="margin-top: 20%;">It's the food and groceries you love, delivered
+        </h1>
+        <form class="ms-5 mt-4  bg-white  p-0 me-5 rounded d-none d-lg-flex d-xl-flex d-xxl-flex" action="#" style="box-shadow: 2px 2px 5px 5px rgb(217, 210, 210);">
+          <input type="text" placeholder="Your Street And Street Number" class="rounded ps-3 p-3" style="border: 1px solid rgb(189, 189, 189) !important; width: 80%;">
+          <button class="text-light fw-bold p-1 rounded ms-1" style="background-color: #C31760;border: none !important;">Find Food</button>
+        </form>
+        </div>
+        <div class="col-6 h-100 position-relative"><img  class="" src="img/hero.png" alt="" style="width: 100%;position: absolute;top: 70px;"></div>
+      </div>
+      <form class="w-100 d-lg-none d-xl-none d-xxl-none d-flex flex-column justify-content-center" action="">
+        <input class="w-100 d-block mb-0 ps-2 rounded" style="height: 35px !important;border: 1px solid grey !important;" type="text" placeholder="Your Street And Street Number">
+        <br>
+        <button class="w-100 d-block mt-0 rounded text-light fw-bold" style="height: 40px !important;border: none !important;background-color: #C21760;">Find Food</button>
+      </form>
+    </div>
+    <div class="container-fluid mt-lg-5 mt-0 mt-lg-5 mt-xl-5 mt-xxl-5 pt-0 pt-lg-3 pt-xl-3 pt-xxl-3 mb-5 mb-lg-0 mb-xl-0 mb-xxl-0">
+      <div class="mb-0 mb-lg-5 mb-xl-5 mb-xxl-5 mt-0 mt-xl-5 mt-lg-5 mt-xxl-5 pt-0 pt-lg-5 pt-xl-5 pt-xxl-5">
+      <h1 class="pt-lg-5 pt-xl-5 pt-xxl-5 fw-medium mt-5 ms-1 ms-lg-5 ms-xl-5 ms-xxl-5">You prepare the food, we handle the rest</h1>
+      <div class="container-fluid mt-5 border d-none d-lg-block d-xl-block d-xxl-block" style="background-image: url(img/home-vendor-pk.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;height: 80vh !important;">
+        <div class="rounded bg-white ps-4 pt-4 pb-4 pe-3 ms-5" style="width: 590px !important;margin-top: 28% !important;box-shadow: 2px 2px 7px 7px rgb(240, 240, 240) !important"><p class="fs-3 text-dark">List your restaurant or shop on foodpanda</p>
+          <p>Would you like millions of new customers to enjoy your amazing food and groceries? So would we!</p>
+          <p>It's simple: we list your menu and product lists online, help you process orders, pick them up, and deliver them to hungry pandas – in a heartbeat!</p>
+      <p>Interested? Let's start our partnership today!</p>
+    <button class="text-light fw-bolder rounded p-2" style="background-color: #C21760;border: none !important;">Get Started</button></div>
+    </div>
+        <div class="container-fluid mt-5 border d-block d-lg-none d-xl-none d-xxl-none" style="background-image: url(img/home-vendor-pk.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;height: 45vh !important;">
+        <div class="rounded bg-white ps-4 pt-4 pb-4 pe-3 mb-5" style="width: 100% !important;margin-top: 55% !important;box-shadow: 2px 2px 7px 7px rgb(240, 240, 240) !important"><p class="fs-3 text-dark">List your restaurant or shop on foodpanda</p>
+        <p>Would you like millions of new customers to enjoy your amazing food and groceries? So would we!</p>
+    <p class="d-none">Interested? Let's start our partnership today!</p>
+  <button class="text-light fw-bolder rounded p-2" style="background-color: #C21760;border: none !important;">Get Started</button></div>
+      </div>
+    </div>
+    </div>
+    <div class="container-fluid mt-5 mt-lg-0 mt-xl-0 mt-xxl-0" style="margin-top: 200px !important;">
+      <h1 class="fw-bolder ms-1 mb-5 ms-lg-5 ms-xl-5 ms-xxl-5" style="">Find us in these cities and many more!</h1>
+      <div class="container d-flex flex-wrap justify-content-center">
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Islamabad.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Islamabad</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Karachi.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Karachi</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Lahore.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Lahore</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Faisalabad.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Faisalabad</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Rawalpindi.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Rawalpindi</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Abottabad.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Abbotabad</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Bahawalpur.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Bahawalpur</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Dera\ Ghazi\ Khan.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Dera Ghazi Khan</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Gujranwala.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Gujaranwala</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Gujrat.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Gujrat</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Hyderabad.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Hyderabad</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Jhelum.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Jhelum</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Kamoke.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Kamoke</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Larkana.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Larkana</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Mangla.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Mangla</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Mardan.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Mardan</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Multan.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Mulatan</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Murree.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Murree</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Okara.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Okara</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Pano\ Aqil.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Pano Aqil</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Peshawar.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Peshawar</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Quetta.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Quetta</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Rahim\ Yar\ Khan.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Rahim Yar Khan</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Sadiqabad.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Sadiqabad</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Sahiwal.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Sahiwal</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Sargodha.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Sargodha</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Sheikhupura.jpg.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Sheikhupura</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Sialkot.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Sialkot</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Sukkur.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Sukkar</p>
+          </div>
+          <div class="m-2 border city" style="border-radius: 20px;background-image: url(img/Wah\ Cannt.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;width: 290px !important;height: 250px;">&nbsp;<p class="bg-white text-center w-75 mx-auto p-2 fs-5 fw-medium" style="border-radius: 15px; margin-top: 160px;">Wah Cantt</p>
+          </div>
+      </div>
+    </div>
+    <div class="container-fluid d-none d-lg-block d-xl-block d-xxl-block">
+      <h1 class="ms-1 ms-lg-5 ms-xl-5 ms-xxl-5 mt-5 fw-bolder">Put us in your pocket</h1>
+      <div class="container d-flex mt-5" style="background-color: #C21760;color: white !important;border-radius: 30px !important;height: 300px !important;">
+        <div class="w-50">
+          <h1 class="fs-3 mt-4 ms-3">Download the food and groceries you love</h1>
+         <p class="fs-5 lh-2 mt-4 ms-3">
+          <img class="me-2" src="img/pkhomepageqrcode.png" alt="" align="left" style="width: 150px !important;">
+          
+          It's all at your fingertips the restaurzants and shops you love. Find the right food and groceries to suit your mood, and make the first bite last. Go ahead, download us.
+          <img class="me-2" src="img/Capture-removebg-preview (1).png" alt="" style="width: 100%;">
+          </p>
+        </div>
+        <div class="w-50"><img class="w-100" src="img/home-foodpanda-apps.png" alt="" style="margin-top: -40px !important;"></div>
+      </div>
+    </div>
+    <div class="container-fluid d-lg-none d-xl-none d-xxl-none">
+      <h1 class="ms-1 ms-lg-5 ms-xl-5 ms-xxl-5 mt-5 fw-bolder">Put us in your pocket</h1>
+      <div class="container d-flex mt-5" style="background-color: #C21760;color: white !important;border-radius: 30px !important;height: 200px !important;">
+        <div class="w-50">
+          <h1 class="fs-3 mt-4 ms-3">Download the food and groceries you love</h1>
+        </div>
+        <div class="w-50"><img class="" src="img/home-foodpanda-apps - Copy.png" alt="" style="width: 100% !important;margin-left: 10px !important;height: 150% !important;margin-top: -50px !important;"></div>
+      </div>
+    </div>
+    <div class="container-fluid mt-lg-5 mt-0 mt-lg-5 mt-xl-5 mt-xxl-5 pt-0 pt-lg-3 pt-xl-3 pt-xxl-3 mb-5 mb-lg-0 mb-xl-0 mb-xxl-0">
+      <div class="me-0">
+      <h1 class="pt-lg-5 pt-xl-5 pt-xxl-5 fw-bolder mt-5 ms-1 ms-lg-5 ms-xl-5 ms-xxl-5">Take your office out to lunch</h1>
+      <div class="container-fluid mt-5 border d-none d-lg-block d-xl-block d-xxl-block" style="background-image: url(img/office.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;height: 80vh !important;">
+        <div class="rounded bg-white ps-4 pt-4 pb-4 pe-3 ms-5" style="width: 590px !important;margin-top: 28% !important;box-shadow: 2px 2px 7px 7px rgb(188, 187, 187) !important"><p class="fs-3 text-bold">Foodpanda for business</p>
+          <p>Would you like millions of new customers to enjoy your amazing food and groceries? So would we!</p>
+          <p>It's simple: we list your menu and product lists online, help you process orders, pick them up, and deliver them to hungry pandas in a heartbeat!</p>
+      <p>Interested? Let's start our partnership today!</p>
+    <button class="text-light fw-bold rounded p-3" style="background-color: #C21760;border: none !important;">Get Started</button></div>
+    </div>
+        <div class="container-fluid mt-5 border d-block d-lg-none d-xl-none d-xxl-none" style="background-image: url(img/office.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;height: 45vh !important;">
+        <div class="rounded bg-white ps-4 pt-4 pb-4 pe-3 mb-5" style="width: 100% !important;margin-top: 55% !important;box-shadow: 2px 2px 7px 7px rgb(240, 240, 240) !important"><p class="fs-3 text-dark">foodpanda for business</p>
+        <p>Would you like millions of new customers to enjoy your amazing food and groceries? So would we!</p>
+    <p class="d-none">Interested? Let's start our partnership today!</p>
+  <button class="text-light fw-bolder rounded p-2" style="background-color: #C21760;border: none !important;">Get Started</button></div>
+      </div>
+    </div>
+    </div>
+
+    <section class="section-8" style="padding: 30%; padding-left: 3%;">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>Order food and groceries online from the best restaurants and shops on foodpanda</h2>
+            <p>Are you hungry? Did you have a long and stressful day? Interested in getting a cheesy pizza delivered to your office or looking to avoid the weekly shop? Then foodpanda Pakistan is the right destination for you! foodpanda offers you a long and detailed list of the best restaurants and shops near you to help make your every day easier.</p>
+              <h2>What's new?</h2>
+            <p>✓ Wide variety of restaurants and shops, an abundance of cuisines & products. <br>
+              ✓ High quality delivery service. <br>
+              ✓ Live chat feature to give App users instant help when they need it. <br>
+              ✓ NEW: foodpanda grocery delivery! Discover the best shops, pharmacies, bakeries and more near you.
+            </p>
+            <hr>
+            <h3>Frequently Asked Questions</h3>
+            <h5>How can I get foodpanda delivery?</h5>
+            <p>To get foodpanda delivery, simply locate the restaurants and shops near you by typing in your address, browse through a variety of restaurants and cuisines, check menus and prices, choose your dishes and add them to the basket. Now you only need to checkout and make the payment. Soon your delicious food will arrive at your doorstep!</p>
+            <h4>Which takeout restaurants open now near me?</h4>
+            <p>You can check which takeout restaurants are open now near you by simply typing your address in the location bar on foodpanda and pressing search. You will see all the available restaurants and shops that deliver to your area.</p>
+            <h3>Does foodpanda deliver 24 hours?</h3>
+            <p>Yes, foodpanda in Pakistan delivers 24 hours. However, many restaurants may be unavailable for a late-night delivery. Please check which places in Pakistan deliver to you within 24 hours by using your address. You can also order groceries 24 hours a day via pandamart.</p>
+            <h3>Can you pay cash for foodpanda?</h3>
+            <p>Yes, you can pay cash on delivery for foodpanda in Pakistan.</p>
+            <h3>How can I pay foodpanda online?</h3>
+            <p>You can pay online while ordering at foodpanda Pakistan by using a credit or debit card or PayPal.</p>
+            <h3>Can I order foodpanda for someone else?</h3>
+            <p>Yes, foodpanda Pakistan allows you to place an order for someone else. During checkout, just update the name and delivery address of the person you're ordering for. Please keep in mind that if the delivery details are not correct and the order cannot be delivered, we won't be able to process a refund.</p>
+            <h3>How much does foodpanda charge for delivery?</h3>
+            <p>Delivery fee charged by foodpanda in Pakistan depends on many operational factors, most of all - location and the restaurant you are ordering from. You can always check the delivery fee while forming your order. Besides, you can filter the restaurants by clicking on the "Free Delivery" icon at the top of your restaurant listing.</p>
+            <h3>What restaurants let you order online?</h3>
+            <p>There are hundreds of restaurants on foodpanda Pakistan that let you order online. For example, KFC, McDonald's, Pizza Hut, OPTP, Hardee's, Domino's, Kababjees and many-many more! In order to check all the restaurants near you that deliver, just type in your address and discover all the available places.</p>
+            <h3>Does foodpanda have minimum order?</h3>
+            <p>Yes, many restaurants have a minimum order. The minimum order value depends on the restaurant you order from and is indicated during your ordering process.</p>
+            <h3>What is the difference between delivery and Pick-Up?</h3>
+            <p>If you choose delivery, a foodpanda rider will collect your order from the restaurant and take it to your chosen delivery address. If you choose Pick-Up, you can takeaway your food directly from the restaurant for extra savings – and to jump to the front of the queue. Pick-Up orders are available for restaurants only.</p>
+            <h5>Order food and groceries online with foodpanda now and enjoy a great dining experience!</h5>
+          </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-9" style="margin-top: -25%;">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="list-links">
+             <hr>
+              <ul class="list-item" style="display: flex; gap: 27px; cursor: pointer;">
+                <li><u><a href="#">Laos</a></u></li>
+                <li><u><a href="#">Cambodia</a></u></li>               
+                <li><u><a href="#">Myanmar</a></u></li>
+                <li><u><a href="#">Thailand</a></u></li>
+                <li><u><a href="#">Hongkong</a></u></li>
+                <li><u><a href="#">Taiwan</a></u></li>
+                <li><u><a href="#">Malysia</a></u></li>
+                <li><u><a href="#">Philippines</a></u></li>
+                <li><u><a href="#">Singapore</a></u></li>
+                <li><u><a href="#">Bangladash</a></u></li>
+              </ul>
+              <hr>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <div class="container border-top pt-3 d-flex justify-content-between mb-2 d-none d-lg-block d-xl-block d-xxl-block" style="margin-top: 4% !important;">
+      <div class="border-end pe-5" style=""><img src="img/logo.png" alt="" style="width: 190px !important;"></div>
+
+      <div>
+        <center>
+          <p class="h3">Name: Eshaal Nafees</p>
+          <p class="h3">Roll: 8998</p>
+          <p class="h3">Class: 6</p>
+        </center>
+      </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
